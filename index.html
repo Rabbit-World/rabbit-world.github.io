@@ -18,7 +18,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo"><h2 class="h1 margin-top-0 margin-bottom-0 margin-left-md margin-right-xs display-flex flex-nowrap"><span style="color: var(--fa-dk-yellow);"><i class="fa-solid fa-planet-ringed fa-fw margin-right-2xs"></i></span>
-          Rabbit World
+          <span data-translatable>Rabbit World // Mondo Rabbit</span>
         </h2></a>
 		<div>
 		  <button id="en-btn"><img src="assets\img\flag-en.png" alt="EN" style="display: block;" /></button>
@@ -32,45 +32,38 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-			<i class="uil uil-estate nav__icon"></i>
               <a href="#home" class="nav__link active-link">
-                Home
+                <i class="uil uil-estate nav__icon"></i><span data-translatable>Home</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-user nav__icon"></i>
               <a href="#lam" class="nav__link">
-                LAM
+                <i class="uil uil-user nav__icon"></i><span data-translatable>LAM</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-file-alt nav__icon"></i>
               <a href="#skills" class="nav__link">
-                rabbit r1
+                <i class="uil uil-file-alt nav__icon"></i><span data-translatable>rabbit r1</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-briefcase-alt nav__icon"></i>
               <a href="#os" class="nav__link">
-                rabbit OS
+                <i class="uil uil-briefcase-alt nav__icon"></i><span data-translatable>rabbit OS</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-scenery nav__icon"></i>
-              <a href="#lessons" class="nav__link" data-translatable>
-                Learn // Imparare
+              <a href="#lessons" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i><span data-translatable>Learn // Imparare</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-briefcase-alt nav__icon"></i>
               <a href="#blog" class="nav__link">
-                Blog
+                <i class="uil uil-briefcase-alt nav__icon"></i><span data-translatable>Blog</span>
               </a>
             </li>
             <li class="nav__item">
-			<i class="uil uil-message nav__icon"></i>
-              <a href="#contact" class="nav__link" data-translatable>
-                Contacts // Contatti
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i><span data-translatable>Contacts // Contatti</span>
               </a>
             </li>
           </ul>
@@ -1365,18 +1358,21 @@
               <a href="#lessons" class="footer__link" data-translatable>Learn // Imparare</a>
             </li>
             <li>
+              <a href="#blog" class="footer__link" data-translatable>Blog</a>
+            </li>
+            <li>
               <a href="#contact" class="footer__link"data-translatable>Contacts // Contatti</a>
             </li>
           </ul>
 
           <div class="footer__socials">
-            <a
+            <!--a
               href="https://www.instagram.com/"
               class="footer__social"
               target="__blank"
             >
             <i class="fa-brands fa-instagram"></i>
-            </a>
+            </a-->
 
             <a
               href="https://x.com/AssistedProfile"
@@ -1400,7 +1396,6 @@
     <!--================== TRANSLATIONS ==================-->
     <script src="assets/dom-i18n.js"></script>
     <script>
-
       var enButton = document.getElementById('en-btn');
       var itButton = document.getElementById('it-btn');
       var frButton = document.getElementById('fr-btn');
