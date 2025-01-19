@@ -165,7 +165,9 @@
             </div>
 			
             <div class="home__data">
-              <h1 class="home__title" data-translatable>Hi, I'm Rabbit // Ciao, sono Rabbit // Salut, je suis Rabbit</h1>
+			  <!-- Element to contain animated typing -->
+			  
+              <h1 class="home__title"><span data-translatable>👋Hi, I am // 👋Ciao, io sono // 👋Salut, je suis </span> <span id="element"></span></h1>
               <h3 class="home__subtitle" data-translatable>
                 Your portable AI assistant // Il tuo assistente AI portatile // Votre assistant IA portable
               </h3>
@@ -1483,5 +1485,18 @@
 	<script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/16b670d8d3.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
-  </body>
+	  <!-- Load library from the CDN -->
+	  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+	  <!-- Setup and start animation! -->
+	  <script>
+		var typed = new Typed('#element', {
+		  //strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+		  strings: ['<i>Rabbit...</i>', '... <i>no no no...</i>', '<i>Clown...</i>', '... <i>no no no...</i>', '<i>Davide...</i>', '... <i>no no no...</i>', '<i>Rabbit!</i>'],
+		  typeSpeed: 50,
+		  loop: false,
+		  loopCount: Infinity,
+		});
+	  </script>
+	</body>
 </html>
