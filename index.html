@@ -17,7 +17,7 @@
   <body oncontextmenu="return false">
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">
+        <a href="index.html" class="nav__logo">
 		<!--h2 class="h1 margin-top-0 margin-bottom-0 margin-left-md margin-right-xs display-flex flex-nowrap">
 		<span style="color: var(--fa-dk-yellow);"><i class="fa-solid fa-planet-ringed fa-fw margin-right-2xs"></i></span></h2-->
           <span data-translatable>Rabbit World // Mondo Rabbit</span>
@@ -136,26 +136,31 @@
                       129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                      -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
                   />
-                  <image
+                  <!--image
                     class="home__blob-img"
                     x="-70"
                     y="-30"
                     xlink:href="assets/img/rabbit_intention.gif"
-                  />
+                  /-->
+				<image class="home__blob-img" id="randomImage" x="-40" y="-40"/>
                 </g>
               </svg>
             </div>
+			
             <div class="home__data">
               <h1 class="home__title" data-translatable>Hi, I'm Rabbit // Ciao, sono Rabbit</h1>
               <h3 class="home__subtitle" data-translatable>
                 Your portable AI assistant // Il tuo assistente AI portatile
               </h3>
+			  
               <p class="home__description" data-translatable>
                 Rabbit R1 is a revolutionary device that uses the Large Action Model (LAM) to perform complex actions with ease. // Rabbit R1 è un dispositivo rivoluzionario che utilizza il Large Action Model (LAM) per eseguire azioni complesse con semplicità.
               </p>
+			  
               <p class="home__description" data-translatable>
                 Discover how it can improve your digital life. // Scopri come può migliorare la tua vita digitale.
               </p>
+			  
               <a href="#contact" class="button button--flex">
                 <span data-translatable>Contact Us // Contattaci</span><i class="uil uil-message button__icon"></i> 
               </a>
@@ -1462,6 +1467,14 @@
         // initializate counter
         aggiornaContatore();
     </script>
+	<script> 
+		// Array dei percorsi delle immagini 
+		const images = [ 'assets/img/rabbit_intention.gif', 'assets/img/rabbit_player.gif', 'assets/img/rabbit_interface.gif', 'assets/img/rabbit_interaction.gif' ]; 
+		// Seleziona un'immagine casuale dall'array 
+		const randomImage = images[Math.floor(Math.random() * images.length)]; 
+		// Imposta l'attributo xlink:href dell'elemento <image> con l'immagine casuale 
+		document.getElementById('randomImage').setAttribute('href', randomImage);
+	</script>
 	<script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/16b670d8d3.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
