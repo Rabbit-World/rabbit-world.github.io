@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rabbit World</title>
+    <title>Rabbit World | github.io</title>
 	<link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/newcss.css" />
@@ -17,37 +17,60 @@
   <body oncontextmenu="return false">
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Rabbit World</a>
+        <a href="#" class="nav__logo"><h2 class="h1 margin-top-0 margin-bottom-0 margin-left-md margin-right-xs display-flex flex-nowrap"><span style="color: var(--fa-dk-yellow);"><i class="fa-solid fa-planet-ringed fa-fw margin-right-2xs"></i></span>
+          Rabbit World
+        </h2></a>
+		<div>
+		  <button id="en-btn"><img src="assets\img\flag-en.png" alt="EN" style="display: block;" /></button>
+		  <button id="it-btn"><img src="assets\img\flag-it.png" alt="IT" style="display: block;" /></button>
+		  <button id="fr-btn"><img src="assets\img\flag-fr.png" alt="FR" style="display: block;" /></button>
+		  <button id="de-btn"><img src="assets\img\flag-de.png" alt="DE" style="display: block;" /></button>
+		  <button id="es-btn"><img src="assets\img\flag-es.png" alt="ES" style="display: block;" /></button>
+		  <button id="ro-btn"><img src="assets\img\flag-ro.png" alt="RO" style="display: block;" /></button>
+		</div>
+
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
+			<i class="uil uil-estate nav__icon"></i>
               <a href="#home" class="nav__link active-link">
-                <i class="uil uil-estate nav__icon"></i>Home
+                Home
               </a>
             </li>
             <li class="nav__item">
+			<i class="uil uil-user nav__icon"></i>
               <a href="#lam" class="nav__link">
-                <i class="uil uil-user nav__icon"></i>LAM
+                LAM
               </a>
             </li>
             <li class="nav__item">
+			<i class="uil uil-file-alt nav__icon"></i>
               <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i>rabbit r1
+                rabbit r1
               </a>
             </li>
             <li class="nav__item">
-              <a href="#qualification" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i>rabbit os
+			<i class="uil uil-briefcase-alt nav__icon"></i>
+              <a href="#os" class="nav__link">
+                rabbit OS
               </a>
             </li>
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i>learn
+			<i class="uil uil-scenery nav__icon"></i>
+              <a href="#lessons" class="nav__link" data-translatable>
+                Learn // Imparare
               </a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i>Contact-Me
+			<i class="uil uil-briefcase-alt nav__icon"></i>
+              <a href="#blog" class="nav__link">
+                Blog
+              </a>
+            </li>
+            <li class="nav__item">
+			<i class="uil uil-message nav__icon"></i>
+              <a href="#contact" class="nav__link" data-translatable>
+                Contacts // Contatti
               </a>
             </li>
           </ul>
@@ -120,15 +143,21 @@
               </svg>
             </div>
             <div class="home__data">
-              <h1 class="home__title">Hi, I'm Rabbit</h1>
-              <h3 class="home__subtitle">
-                Il tuo assistente AI portatile
+              <h1 class="home__title" data-translatable>Hi, I'm Rabbit // Ciao, sono Rabbit</h1>
+              <h3 class="home__subtitle" data-translatable>
+                Your portable AI assistant // Il tuo assistente AI portatile
               </h3>
-              <p class="home__description">
-                Rabbit R1 è un dispositivo rivoluzionario che utilizza il <strong>Large Action Model (LAM)</strong> per eseguire azioni complesse con semplicità. Scopri come può migliorare la tua vita digitale.
+			  <br/>
+              <p class="home__description" data-translatable>
+                Rabbit R1 is a revolutionary device that uses the Large Action Model (LAM) to perform complex actions with ease. // Rabbit R1 è un dispositivo rivoluzionario che utilizza il Large Action Model (LAM) per eseguire azioni complesse con semplicità.
               </p>
-              <a href="#contact" class="button button--flex">
-                Contact me<i class="uil uil-message button__icon"></i>
+			  
+              <p class="home__description" data-translatable>
+                Discover how it can improve your digital life. // Scopri come può migliorare la tua vita digitale.
+              </p>
+			  <br/>
+              <a href="#contact" class="button button--flex" data-translatable>
+                <i class="uil uil-message button__icon" data-translatable> Contact me</i> // <i class="uil uil-message button__icon" data-translatable> Contattami</i>
               </a>
             </div>
           </div>
@@ -136,75 +165,92 @@
           <div class="home__scroll">
             <a href="#lam" class="home__scroll-button button--flex">
               <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll down</span>
+              <span class="home__scroll-name" data-translatable>Scroll down to find out how deep the rabbit hole is // Scorri verso il basso per scoprire quanto è profonda la tana del bianconiglio</span>
               <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>
         </div>
       </section>
 
+	<br/>
+	<br/>
+	<br/>
+
       <!--======================= LAM ========================-->
 
       <section class="lam section" id="lam">
-        <h2 class="section__title">LAM</h2>
-        <span class="section__subtitle">playground</span>
+        <h2 class="section__title">Large Action Model</h2>
+        <span class="section__subtitle" data-translatable>playground // parcogiochi</span>
 
         <div class="lam__container container grid">
           <img src="assets\img\playground.webp" alt="" class="lam__img" />
 
           <div class="lam__data">
-            <p class="lam__description">
-              Il sistema LAM consente a <strong>rabbit OS</strong> di comprendere le tue intenzioni e tradurle in azioni concrete. Dalla gestione delle app al completamento di attività complesse, LAM rende tutto più semplice.
+            <p class="lam__description" data-translatable>
+              The LAM system allows rabbit OS to understand your intentions and translate them into concrete actions. // Il sistema LAM consente a rabbit OS di comprendere le tue intenzioni e tradurle in azioni concrete.
             </p>
+            <p class="lam__description" data-translatable>
+              From managing apps to completing complex tasks, LAM makes it easy. // Dalla gestione delle app al completamento di attività complesse, LAM rende tutto più semplice.
+            </p>
+
+	<br/>
+	<br/>
 
             <div class="lam__info">
               <div>
-                <span class="lam__info-title">08.30+</span>
-                <span class="lam__info-name">Aggregate <br />CGPA</span>
+                <span class="lam__info-title" data-translatable>24h</span>
+                <span class="lam__info-name" data-translatable>no stop</span>
               </div>
 
               <div>
-                <span class="lam__info-title">04+</span>
-                <span class="lam__info-name"
+                <span class="lam__info-title" data-translatable>11+</span>
+                <span class="lam__info-name" data-translatable
                   >
-                  Projects</span
+                  Projects // Progetti</span
                 >
               </div>
 
               <div>
-                <span class="lam__info-title">01+</span>
-                <span class="lam__info-name">Months <br />experience</span>
+                <span class="lam__info-title" data-translatable>08+</span>
+                <span class="lam__info-name" data-translatable>Months experience // Mesi di esperienza</span>
               </div>
             </div>
 
+	<br/>
+	<br/>
+
             <div class="lam__buttons">
               <a download="" href="assets\" style="margin:10px;" class="button button--flex">
-                LAM playground<i class="fas fa-download button__icon"></i>
+                LAM playground <i class="fas fa-download button__icon"></i>
               </a> 
      
               <a download="" href="assets\" style="margin:10px;" class="button button--flex">
-                teachmode<i class="fas fa-download button__icon"></i>
+                teachmode <i class="fas fa-download button__icon"></i>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!--===================== SKILLS =====================-->
+	<br/>
+	<br/>
+	<br/>
+
+      <!--===================== rabbit r1 =====================-->
 
       <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
+        <h2 class="section__title">rabbit r1</h2>
+        <span class="section__subtitle" data-translatable>His technical level // Il suo livello tecnico</span>
 
         <div class="skills__container container grid">
           <div>
             <!--==================== Skill 1 =================-->
-            <div class="skills__content skills__open">
+            <div class="skills__content skills__close">
               <div class="skills__header">
                 <i class="fas fa-pencil-ruler skills__icon"></i>
 
                 <div>
-                  <h1 class="skills__title">Programming Languages</h1>
+                  <h1 class="skills__title" data-translatable>Programming Languages // Linguaggi di programmazione</h1>
                 </div>
 
                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -295,7 +341,7 @@
               <div class="skills__header">
                 <i class="fas fa-swatchbook skills__icon"></i>
                 <div>
-                  <h1 class="skills__title">Technologies</h1>
+                  <h1 class="skills__title" data-translatable>Technologies // Tecnologie</h1>
                 </div>
 
                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -347,7 +393,66 @@
                 </div>
               </div>
             </div>
-          </div>
+			
+            <!--==================== Skill 3 =================-->
+            <div class="skills__content skills__open">
+              <div class="skills__header">
+                <i class="fas fa-swatchbook skills__icon"></i>
+                <div>
+                  <h1 class="skills__title" data-translatable>... and more // ... e molto altro</h1>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid">
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Psychology // Psicologia</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Medical Science // Medicina</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Finance // Finanza</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Marketing // Marketing</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Autonomous Driving // Guida autonoma</h3>
+                  </div>
+                  
+                </div>
+                
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Virtual Assistance // Assistenza Virtuale</h3>
+                  </div>
+                  
+                </div>
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name" data-translatable>Civil/Industrial Automation // Automazione civile/industriale</h3>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>		  
         </div>
       </section>
 
@@ -355,35 +460,31 @@
 
       <section
         class="qualification__section service__section"
-        id="qualification"
+        id="os"
       >
-        <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle">My personal journey</span>
+        <h2 class="section__title">rabbit OS</h2>
+        <span class="section__subtitle" data-translatable>How it works? // Come funziona?</span>
 
         <div
           class="qualification__container container grid services__container"
         >
-          <div class="qualification__tabs">
-            <div
-              class="qualification__button button--flex qualification__active"
-              data-target="#education"
-            >
-              <i class="uil uil-graduation-cap qualification__icon"></i>
-              Education
-            </div>
-          </div>
-
           <div class="qualification__sections">
-            <!--====== Qualification Content 1 ======-->
+            <!--====== OS Content 1 ======-->
             <div
               class="qualification__content qualifiation__active services__content"
               data-content
               id="education"
             >
-              <!--====== Qualification 1 ======-->
+              <!--====== OS 1 ======-->
               <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">SSLC</h3>
+                <div style="text-align: right;">
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    Learn More
+                    <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <h3 class="qualification__title">intention</h3>
                   <span class="qualification__subtitle"
                     >S.V.S <br />High School</span
                   >
@@ -391,13 +492,7 @@
                     <i class="uil uil-calendar-alt"></i>
                     - 2019
                   </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
-                  <div class="services__modal">
+                  <div class="services__modal" style="text-align: left;">
                     <div class="services__modal-content">
                       <h4 class="services__modal-title">
                         Class 10th Summary :
@@ -436,7 +531,7 @@
                 </div>
               </div>
 
-              <!--====== Qualification 2 ======-->
+              <!--====== OS 2 ======-->
               <div class="qualification__data">
                 <div></div>
 
@@ -445,7 +540,13 @@
                   <span class="qualification__line"></span>
                 </div>
                 <div>
-                  <h3 class="qualification__title">Class 12th</h3>
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    <i class="uil uil-arrow-left button__icon"></i>
+                    Learn More
+                  </span>
+                  <h3 class="qualification__title">interface</h3>
                   <span class="qualification__subtitle"
                     >Vidyodaya <br />Pre University College</span
                   >
@@ -453,33 +554,26 @@
                     <i class="uil uil-calendar-alt"></i>
                     - 2021
                   </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
                   <div class="services__modal">
                     <div class="services__modal-content">
                       <h4 class="services__modal-title">
-                        Class 12th Summary :
+                        interface:
                       </h4>
                       <i class="uil uil-times services__modal-close"></i>
                       <ul class="services__modal-services grid">
                         <li class="services__modal-service">
                           <i
                             class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>
-                            Subjects studied: Physics, Chemistry, Maths,
-                            English, Statistics , Hindi.
+                          ></i> 
+                          <p data-translatable>
+                            rabbit OS will first understand what you mean by parsing your natural language voice prompt. Human intentions are deeply personal, have layers, may be incomplete, and could change on a whim. rabbit OS converts your requests into actionable steps and responses so that LAM can execute the task for you. // rabbit OS capirà prima cosa intendi analizzando il tuo prompt vocale in linguaggio naturale. Le intenzioni umane sono profondamente personali, hanno strati, possono essere incomplete e potrebbero cambiare a seconda dei capricci. rabbit OS converte le tue richieste in passaggi e risposte attuabili in modo che LAM possa eseguire l'attività per te.
                           </p>
                         </li>
                         <li class="services__modal-service">
                           <i
                             class="uil uil-check-circle services__moda-icon"
                           ></i>
-                          <p>Scored 87.5%</p>
+                          <p>Scored 97.5%</p>
                         </li>
                       </ul>
                     </div>
@@ -487,10 +581,16 @@
                 </div>
               </div>
 
-              <!--====== Qualification 3 ======-->
+              <!--====== OS 3 ======-->
               <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">College</h3>
+                <div style="text-align: right;">
+                  <span
+                    class="button button--flex button--small button--link services__button"
+                  >
+                    Learn More
+                    <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <h3 class="qualification__title">interaction</h3>
                   <span class="qualification__subtitle"
                     >Canara Enginnering College, Manglore</span
                   >
@@ -498,13 +598,7 @@
                     <i class="uil uil-calendar-alt"></i>
                     2021 - 2025
                   </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
-                  <div class="services__modal">
+                  <div class="services__modal" style="text-align: left;">
                     <div class="services__modal-content">
                       <h4 class="services__modal-title">College Summary :</h4>
                       <i class="uil uil-times services__modal-close"></i>
@@ -574,154 +668,457 @@
 
                 <div>
                   <span class="qualification__rounder"></span>
-                  <!--<span class="qualification__line"></span>-->
+                  <!--span class="qualification__line"></span-->
                 </div>
               </div>
             </div>
           </div>
         </div>
+		<br/>
+		<br/>
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              Education
+            </div>
+          </div>
       </section>
-
+	  
       <!--=================== learn ===================-->
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Projects</h2>
-        <span class="section__subtitle">Most recent work</span>
+      <section class="portfolio section" id="lessons">
+        <h2 class="section__title" data-translatable>Learn // Imparare</h2>
+        <span class="section__subtitle" data-translatable>see r1 in action // guarda r1 in azione</span>
 
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper">
-            <!-- ------------------------portfollio 1-------------------- -->
+            <!-- ------------------------lesson 1a-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/01.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“give me a recipe for butter chicken” // "dammi una ricetta per il pollo al burro"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>speak & ask // parla & chiedi</span>
+				<i class="uil uil-comment button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  rabbit OS uses a multi-step agent with complex reasoning abilities to pick the correct tools for any question you may have. superpowered with Perplexity and Wolfram|Alpha. // rabbit OS utilizza un agente multi-step con capacità di ragionamenti complessi per scegliere gli strumenti corretti per qualsiasi domanda tu possa avere. Dotato di superpoteri come Perplexity e Wolfram|Alpha.
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 1b-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/02.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“is the moon made out of cheese?” // "la luna è fatta di formaggio?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>speak & ask // parla & chiedi</span>
+				<i class="uil uil-comment button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  rabbit OS uses a multi-step agent with complex reasoning abilities to pick the correct tools for any question you may have. superpowered with Perplexity and Wolfram|Alpha. // rabbit OS utilizza un agente multi-step con capacità di ragionamenti complessi per scegliere gli strumenti corretti per qualsiasi domanda tu possa avere. Dotato di superpoteri come Perplexity e Wolfram|Alpha.
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 1c-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/03.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“what movies are out right now?” // "Quali film sono usciti in questo momento?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>speak & ask // parla & chiedi</span>
+				<i class="uil uil-comment button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  rabbit OS uses a multi-step agent with complex reasoning abilities to pick the correct tools for any question you may have. superpowered with Perplexity and Wolfram|Alpha. // rabbit OS utilizza un agente multi-step con capacità di ragionamenti complessi per scegliere gli strumenti corretti per qualsiasi domanda tu possa avere. Dotato di superpoteri come Perplexity e Wolfram|Alpha.
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 2a-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/04.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“can you tell me what this is?” // "puoi dirmi cosa è questo?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>identify objects // identificare oggetti</span>
+				<i class="uil uil-object-group button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  use r1’s camera to superpower your searches, transcribe text, and help buy items. // utilizza la fotocamera di r1 per potenziare le tue ricerche, trascrivere testi e aiutarti ad acquistare oggetti.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 2b-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/05.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“what am i looking at?” // "Cosa sto guardando?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>identify objects // identificare oggetti</span>
+				<i class="uil uil-object-group button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  use r1’s camera to superpower your searches, transcribe text, and help buy items. // utilizza la fotocamera di r1 per potenziare le tue ricerche, trascrivere testi e aiutarti ad acquistare oggetti.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 3a-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/06.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>double click PTT button to activate camera // fare doppio clic sul pulsante PTT per attivare la fotocamera</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>magic camera // camera magica</span>
+				<i class="uil uil-flip-h-alt button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  put a retro futuristic twist on all photos taken with r1 or trigger it by adding your own stylistic twist on the photo. // aggiungi un tocco retrò-futuristico a tutte le foto scattate con r1 oppure attivalo aggiungendo il tuo tocco stilistico alla foto.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 3b-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/07.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“take this picture in the style of lego” // "scatta questa foto in stile lego"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>magic camera // camera magica</span>
+				<i class="uil uil-flip-h-alt button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  put a retro futuristic twist on all photos taken with r1 or trigger it by adding your own stylistic twist on the photo. // aggiungi un tocco retrò-futuristico a tutte le foto scattate con r1 oppure attivalo aggiungendo il tuo tocco stilistico alla foto.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 4-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/08.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“which way to the beach?” // "da che parte si va alla spiaggia?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>bidirectional translation // traduzione bidirezionale</span>
+				<i class="uil uil-language button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  instantly translate between more than 100 languages. // traduce istantaneamente tra più di 100 lingue.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 5-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/09.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“what does the title of this book mean in english?” // "Cosa significa il titolo di questo libro in inglese?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>visual interpretation // interpretazione visiva</span>
+				<i class="uil uil-eye button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  take a photo of any foreign languages in vision mode with r1, the rabbit will tell you what it means and give you a logical response. // scatta una foto di una qualsiasi lingua straniera in modalità visione con r1, il rabbit ti dirà cosa significa e ti darà una risposta logica.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 6-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/10.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“what was that butter chicken recipe again?” // "qual era di nuovo la ricetta del pollo al burro?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>memory recall // richiamo della memoria</span>
+				<i class="uil uil-redo button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  recall your past interactions with r1 including conversations, notes, voice recordings, images, and search results. // ricorda le tue interazioni passate con r1, comprese conversazioni, appunti, registrazioni vocali, immagini e risultati di ricerca.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 7a-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/11.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“who are the top five NBA players of this season?” // "chi sono i cinque migliori giocatori NBA di questa stagione?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>generative UI // interfaccia utente generativa</span>
+				<i class="uil uil-rss-interface button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  change the look of the r1 interface to any style you want. // cambia l'aspetto dell'interfaccia r1 con lo stile che preferisci.
+
+
+
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 7b-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/12.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>“who are the top five NBA players of this season?” // "chi sono i cinque migliori giocatori NBA di questa stagione?"</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>generative UI // interfaccia utente generativa</span>
+				<i class="uil uil-rss-interface button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  change the look of the r1 interface to any style you want. // cambia l'aspetto dell'interfaccia r1 con lo stile che preferisci.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+            <!-- ------------------------lesson 8-------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/learn/13_playground.webp" class="portfolio__img" />
+				<br/>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">
+                <i class="uil uil-arrow button__icon"></i>  <b data-translatable>browse amazon.com for “tom’s toothpaste chloride free, two pack”. go to the product page and select one time purchase. add to the cart. go to the cart and proceed to check out and place the order. // cerca su amazon.com "tom's teethpaste chloride free, two pack". vai alla pagina del prodotto e seleziona acquisto una tantum. aggiungi al carrello. vai al carrello e procedi al check-out e fai l'ordine.</b>
+                </h3>
+                <p class="portfolio__description">  <span data-translatable>LAM playground // parco giochi LAM</span>
+				<i class="uil uil-archway button__icon"></i><br/><br/>
+				
+                <p class="portfolio__description" data-translatable>  ask your personal agent to navigate websites, check information, and take actions on any digital interface on your behalf. // chiedi al tuo agente personale di navigare sui siti web, controllare le informazioni ed eseguire azioni su qualsiasi interfaccia digitale per tuo conto.
+
+                </p></p>
+                <a
+                  href="https://github.com/"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a
+                  href=""
+                  class="button button--flex button--small portfolio__button"
+                >
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- add arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+          <!-- add pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+	<br/>
+	<br/>
+	<br/>
+
+      <!--=================== BLOG ===================-->
+      <section class="portfolio section" id="blog">
+        <h2 class="section__title" data-translatable>Blog</h2>
+        <span class="section__subtitle" data-translatable>Most recent posts // I post più recenti</span>
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- ------------------------post 1-------------------- -->
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio5.png" class="portfolio__img" />
 
               <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  DarkSurfer-Extension
+                <h3 class="portfolio__title" data-translatable>
+                  under construction // in costruzione
                 </h3>
                 <p class="portfolio__description">
                   DarkSurfer-Extension, is a project based on the application of advanced Language Models LMs to detect and eliminate dark patterns on websites. It aims to improve user-awareness, exposing real-time of devious design practices in situ. It helps make the internet more user-friendly by using its novel LMs and popular LM-based models, such as RoBERTa, BERT, and XLNet.
-                </p>
-                <a
-                  href="https://github.com/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-            <!-- ------------------------portfollio 2-------------------- -->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio1.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Responsive-Weather-Forecast-Website
-                </h3>
-                <p class="portfolio__description">
-                  This project is a weather website that provides live weather
-                  updates and forecasts based on your location. Stay informed
-                  about current weather conditions, temperature, and more.
-                  Explore interactive maps, hourly/daily forecasts, and helpful
-                  insights. Stay ahead of the forecast and make the most of your
-                  day!
-                </p>
-                <a
-                  href="https://github.com/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- ------------------------portfollio 3-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio2.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">Spotify-Clone</h3>
-                <p class="portfolio__description">
-                  Spotify Clone is a web app developed using HTML, CSS, and
-                  JavaScript. It recreates Spotify's interface and features,
-                  allowing users to browse, search, and play songs, create
-                  playlists, and discover new music. Responsive design ensures a
-                  seamless experience on any device. Contributions are welcome!
-                </p>
-                <a
-                  href="https://github.com/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-            <!-- ------------------------portfollio 4-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio3.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">Language Translator</h3>
-                <p class="portfolio__description">
-                  This language translator web app is a user-friendly tool built
-                  with HTML, CSS, and JavaScript. It leverages Google Translate
-                  API to seamlessly translate text between multiple languages.
-                  The app features a simple interface, ensuring smooth
-                  performance across devices..
-                </p>
-                <a
-                  href="https://github.com/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- ------------------------portfollio 5-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio4.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">Sorting Visualizer</h3>
-                <p class="portfolio__description">
-                  Sorting Visualizer is a Java-based project that allows users
-                  to visualize various sorting algorithms in action using a
-                  Graphical User Interface (GUI). It provides an interactive and
-                  educational way to understand how different sorting algorithms
-                  work by visually demonstrating their step-by-step sorting
-                  process.
                 </p>
                 <a
                   href="https://github.com/"
@@ -753,10 +1150,14 @@
         </div>
       </section>
 
+	<br/>
+	<br/>
+	<br/>
+
       <!--===================== Contact Me =====================-->
       <section class="contact section" id="contact">
-        <h2 class="section__title">Contact Me</h2>
-        <span class="section__subtitle">Get in touch</span>
+        <h2 class="section__title" data-translatable>Contact Us // Contattaci</h2>
+        <span class="section__subtitle" data-translatable>Get in touch // Rimaniamo in contatto</span>
 
         <div class="contact__container container grid">
           <div>
@@ -764,9 +1165,9 @@
               <i class="uil uil-calling contact__icon"></i>
 
               <div>
-                <h3 class="contact__title">Contact Me</h3>
+                <h3 class="contact__title" data-translatable>Call Us // Chiamaci</h3>
                 <span class="contact__subtitle"
-                  ><a href="tel:ready soon"></a>ready soon</span
+                  ><a href="tel:ready soon" data-translatable>ready soon // disponibile presto</a></span
                 >
               </div>
             </div>
@@ -777,7 +1178,7 @@
               <div>
                 <h3 class="contact__title">Email</h3>
                 <span class="contact__subtitle"
-                  >rabbit.clown.world+github@gmail.com</span
+                  >rabbit.clown.world+website@gmail.com</span
                 >
               </div>
             </div>
@@ -786,8 +1187,8 @@
               <i class="uil uil-map-marker contact__icon"></i>
 
               <div>
-                <h3 class="contact__title">Location</h3>
-                <span class="contact__subtitle"
+                <h3 class="contact__title" data-translatable>Location // Luogo</h3>
+                <span class="contact__subtitle" data-translatable
                   >r1 batch 3, Remote</span
                 >
               </div>
@@ -797,7 +1198,7 @@
           <form action="" class="contact__form grid">
             <div class="contact__inputs grid">
               <div class="contact__content">
-                <label for="" class="content__label">Name</label>
+                <label for="" class="content__label" data-translatable>Name // Nome</label>
                 <input type="text" class="contact__input" />
               </div>
 
@@ -808,7 +1209,7 @@
             </div>
 
             <div class="contact__content">
-              <label for="" class="content__label">Message</label>
+              <label for="" class="content__label" data-translatable>Message // Messaggio</label>
               <textarea
                 name=""
                 id=""
@@ -820,11 +1221,10 @@
 
             <div>
               <a
-                href=" mailto: rabbit.clown.world+github@gmail.com?subject=Testing our mailto! &body=This is only a test!"
-                class="button button--flex"
+                href=" mailto: rabbit.clown.world+website@gmail.com?subject=Testing our mailto! &body=This is only a test!"
+                class="button button--flex" data-translatable
               >
-                Send Message
-                <i class="uil uil-message button__icon"></i>
+                Send Message // Invia messaggio
               </a>
             </div>
           </form>
@@ -838,8 +1238,8 @@
         <div class="footer__container container grid">
           <div>
             <h1 class="footer__title">Rabbit World</h1>
-            <span class="footer__subtitle"
-              >Il tuo assistente AI portatile</span
+            <span class="footer__subtitle" data-translatable
+              >Your portable AI assistant // Il tuo assistente AI portatile</span
             >
           </div>
 
@@ -874,7 +1274,7 @@
           </div>
         </div>
 
-        <p class="footer__copy">&#169; 2025 rabbit world. All right reserved.</p>
+        <p class="footer__copy" data-translatable>&#169; 2025 rabbit world. All right reserved. // &#169; 2025 rabbit world. Tutti i diritti sono riservati.</p>
       </div>
     </footer>
 
@@ -883,8 +1283,50 @@
       <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
+    <!--================== TRANSLATIONS ==================-->
+    <script src="assets/dom-i18n.js"></script>
+    <script>
+
+      var enButton = document.getElementById('en-btn');
+      var itButton = document.getElementById('it-btn');
+      var frButton = document.getElementById('fr-btn');
+      var deButton = document.getElementById('de-btn');
+      var esButton = document.getElementById('es-btn');
+      var esButton = document.getElementById('ro-btn');
+      var i18n = domI18n({
+        selector: '[data-translatable]',
+        separator: ' // ',
+        languages: ['en', 'it-IT', 'fr-FR', 'de-DE', 'es-ES', 'ro-RO'],
+        defaultLanguage: 'en'
+      });
+
+      enButton.onclick = function () {
+        i18n.changeLanguage('en');
+      };
+
+      itButton.onclick = function () {
+        i18n.changeLanguage('it-IT');
+      };
+
+      frButton.onclick = function () {
+        i18n.changeLanguage('fr-FR');
+      };
+
+      deButton.onclick = function () {
+        i18n.changeLanguage('de-DE');
+      };
+
+      esButton.onclick = function () {
+        i18n.changeLanguage('es-ES');
+      };
+
+      esButton.onclick = function () {
+        i18n.changeLanguage('ro-RO');
+      };
+
+    </script>
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/16b670d8d3.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
   </body>
 </html>
