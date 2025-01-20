@@ -13,7 +13,7 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
   </head>
-
+	
   <body oncontextmenu="return false">
     <header class="header" id="header">
       <nav class="nav container">
@@ -521,10 +521,7 @@
 					  href="https://forum.rabbitcommunity.tech/t/rabbitos-release-notes/40"
 					  target="_blank"
 					>
-					  <span data-translatable>- release notes // - note di rilascio // notes de version 
-
-
-</span>
+					  <span data-translatable>- release notes // - note di rilascio // notes de version</span>
 					  <i class="uil uil-external-link-alt button__icon"></i>
 					</a>
                   </div>
@@ -1220,8 +1217,7 @@
       <!--=================== BLOG ===================-->
       <section class="portfolio section" id="blog">
         <h2 class="section__title" data-translatable>Blog</h2>
-        <span class="section__subtitle" data-translatable>Most recent posts // I post più recenti // Les articles les plus récents
-</span>
+        <span class="section__subtitle" data-translatable>Most recent posts // I post più recenti // Les articles les plus récents</span>
 
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper">
@@ -1316,8 +1312,7 @@
             </div>
           </div>
 
-		  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScy0L5_efQgrDR_7dCDqSjK54UFzboFUpjt-EQu7qvKW7QrPw/viewform?embedded=true" width="640" height="875" frameborder="0" marginheight="0" marginwidth="0" data-translatable>Loading... // Caricamento... // Chargè...</iframe>
-
+		<iframe id="contactFormIframe" src="" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0" data-translatable>Loading... // Caricamento... // Chargè...</iframe>
 			<!--form action="" class="contact__form grid">
             <div class="contact__inputs grid">
               <div class="contact__content">
@@ -1411,44 +1406,77 @@
 
     <!--================== TRANSLATIONS ==================-->
     <script src="assets/dom-i18n.js"></script>
-    <script>
-      var enButton = document.getElementById('en-btn');
-      var itButton = document.getElementById('it-btn');
-      var frButton = document.getElementById('fr-btn');
-      var deButton = document.getElementById('de-btn');
-      var esButton = document.getElementById('es-btn');
-      var esButton = document.getElementById('ro-btn');
-      var i18n = domI18n({
-        selector: '[data-translatable]',
-        separator: ' // ',
-        languages: ['en', 'it-IT', 'fr-FR', 'de-DE', 'es-ES', 'ro-RO'],
-        defaultLanguage: 'en'
-      });
+	  <script>
+        // Configurazione di dom-i18n
+        var i18n = domI18n({
+            selector: '[data-translatable]',
+            separator: ' // ',
+            languages: ['en', 'it-IT', 'fr-FR', 'de-DE', 'es-ES', 'ro-RO'],
+            defaultLanguage: 'en'
+        });
 
-      enButton.onclick = function () {
-        i18n.changeLanguage('en');
-      };
+        // Funzione per rilevare la lingua del browser
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const supportedLanguages = ['en', 'it-IT', 'fr-FR', 'de-DE', 'es-ES', 'ro-RO'];
 
-      itButton.onclick = function () {
-        i18n.changeLanguage('it-IT');
-      };
+            // Controlla se la lingua del browser è supportata, altrimenti usa la predefinita
+            return supportedLanguages.includes(browserLang) ? browserLang : 'en';
+        }
 
-      frButton.onclick = function () {
-        i18n.changeLanguage('fr-FR');
-      };
+        // Variabile per memorizzare la lingua rilevata
+        var detectedLanguage = detectBrowserLanguage();
 
-      deButton.onclick = function () {
-        i18n.changeLanguage('de-DE');
-      };
+        // Funzione per aggiornare l'iframe in base alla lingua
+        function updateIframe(language) {
+            const iframe = document.getElementById('contactFormIframe');
 
-      esButton.onclick = function () {
-        i18n.changeLanguage('es-ES');
-      };
+            // Definizione degli URL per ogni lingua
+            const urls = {
+                'en': 'https://docs.google.com/forms/d/e/1FAIpQLSd95OyD0JKVtzcc16TTVxfiIO82E9SvKdAJCQZmJ7dXd1zQRw/viewform?embedded=true',
+                'it-IT': 'https://docs.google.com/forms/d/e/1FAIpQLScy0L5_efQgrDR_7dCDqSjK54UFzboFUpjt-EQu7qvKW7QrPw/viewform?embedded=true',
+                'fr-FR': 'https://docs.google.com/forms/d/e/1FAIpQLSfpX0HnsW-iP1BHDY3Qoj8wfhdUgmTvWX0uU62aOppFCt4yDg/viewform?usp=header',
+                'de-DE': 'https://docs.google.com/forms/d/e/1FAIpQLSffXrMt7IgEJ_K0q4hx_3ZekIUDchuOEkuzqomLnJa3okHtqw/viewform?usp=header',
+                'es-ES': 'https://docs.google.com/forms/d/e/1FAIpQLSeZuPckbL6NBUosufxKvjgkgWkuoordnLS0bXYzIs4Mj5GXSw/viewform?usp=header',
+                'ro-RO': 'https://docs.google.com/forms/d/e/1FAIpQLSc3z6NMLzKTfxs9thT-6xG1z1j1BfIaEkSMg3XyM8I38uAKzQ/viewform?usp=header'
+            };
 
-      esButton.onclick = function () {
-        i18n.changeLanguage('ro-RO');
-      };
+            // Aggiorna l'attributo src dell'iframe
+            iframe.src = urls[language] || urls['en'];
+        }
 
+        // Eventi per i pulsanti di cambio lingua
+        window.onload = function () {
+            // Imposta la lingua iniziale in base alla variabile detectedLanguage
+            i18n.changeLanguage(detectedLanguage);
+            updateIframe(detectedLanguage);
+
+            // Aggiungi eventi ai pulsanti per cambiare lingua
+            document.getElementById('en-btn').onclick = function () {
+                i18n.changeLanguage('en');
+                updateIframe('en');
+            };
+            document.getElementById('it-btn').onclick = function () {
+                i18n.changeLanguage('it-IT');
+                updateIframe('it-IT');
+            };
+            document.getElementById('fr-btn').onclick = function () {
+                i18n.changeLanguage('fr-FR');
+                updateIframe('fr-FR');
+            };
+            document.getElementById('de-btn').onclick = function () {
+                i18n.changeLanguage('de-DE');
+                updateIframe('de-DE');
+            };
+            document.getElementById('es-btn').onclick = function () {
+                i18n.changeLanguage('es-ES');
+                updateIframe('es-ES');
+            };
+            document.getElementById('ro-btn').onclick = function () {
+                i18n.changeLanguage('ro-RO');
+                updateIframe('ro-RO');
+            };
+        };
     </script>
     <script>
         // Funzione per calcolare i mesi trascorsi da Giugno 2024 data di lancio del Rabbit r1
