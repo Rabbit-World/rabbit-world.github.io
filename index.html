@@ -1297,6 +1297,31 @@
                 >
               </div>
             </div>
+
+              <div>
+				<img data-translatable 
+				 data-img-en="assets/img/certified_en.png" 
+				 data-img-it-IT="assets/img/certified_it.png" 
+				 data-img-fr-FR="assets/img/certified_fr.png" 
+				 data-img-de-DE="assets/img/certified_de.png" 
+				 data-img-es-ES="assets/img/certified_es.png" 
+				 data-img-ro-RO="assets/img/certified_en.png" 
+				 src="assets/img/certified_en.png" 
+				 alt="Certificate">
+              </div>
+			<br/>
+              <div>
+				<img data-translatable 
+				 data-img-en="assets/img/certified_pro_en.png" 
+				 data-img-it-IT="assets/img/certified_pro_it.png" 
+				 data-img-fr-FR="assets/img/certified_pro_fr.png" 
+				 data-img-de-DE="assets/img/certified_pro_de.png" 
+				 data-img-es-ES="assets/img/certified_pro_es.png" 
+				 data-img-ro-RO="assets/img/certified_pro_en.png" 
+				 src="assets/img/certified_pro_en.png" 
+				 alt="Certificate">
+              </div>
+
           </div>
 
 		<iframe id="contactFormIframe" src="" width="100%" height="1100px" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen data-translatable>Loading... // Caricamento... // Chargè... // Laden... // Cargando...</iframe>
@@ -1432,36 +1457,53 @@
             iframe.src = urls[language] || urls['en'];
         }
 
+		// Funzione per aggiornare le immagini in base alla lingua
+		function updateImages(language) {
+		document.querySelectorAll('[data-translatable]').forEach(img => {
+		  const newSrc = img.getAttribute(`data-img-${language}`);
+		  if (newSrc) {
+			img.src = newSrc;
+		  }
+		});
+		}
+
         // Eventi per i pulsanti di cambio lingua
         window.onload = function () {
             // Imposta la lingua iniziale in base alla variabile detectedLanguage
             i18n.changeLanguage(detectedLanguage);
             updateIframe(detectedLanguage);
+			updateImages(detectedLanguage);
 
             // Aggiungi eventi ai pulsanti per cambiare lingua
             document.getElementById('en-btn').onclick = function () {
                 i18n.changeLanguage('en');
                 updateIframe('en');
+				updateImages('en');
             };
             document.getElementById('it-btn').onclick = function () {
                 i18n.changeLanguage('it-IT');
                 updateIframe('it-IT');
+				updateImages('it-IT');
             };
             document.getElementById('fr-btn').onclick = function () {
                 i18n.changeLanguage('fr-FR');
                 updateIframe('fr-FR');
+				updateImages('fr-FR');
             };
             document.getElementById('de-btn').onclick = function () {
                 i18n.changeLanguage('de-DE');
                 updateIframe('de-DE');
+				updateImages('de-DE');
             };
             document.getElementById('es-btn').onclick = function () {
                 i18n.changeLanguage('es-ES');
                 updateIframe('es-ES');
+				updateImages('es-ES');
             };
             document.getElementById('ro-btn').onclick = function () {
                 i18n.changeLanguage('ro-RO');
                 updateIframe('ro-RO');
+				updateImages('ro-RO');
             };
         };
     </script>
