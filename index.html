@@ -79,7 +79,10 @@
         <div class="nav__btns">
           <!-- Theme change button -->
           <span><i class="uil uil-moon change-theme" id="theme-button"></i></span>
-
+			<span><a href="" target="_blank" id="languageLink" class="shop-icon" aria-label="">
+			  <i class="uil uil-shopping-cart change-theme" id="theme-button" style="margin-left: 15px;"></i>
+			</a>
+		  </span>
           <div class="nav__toggle" id="nav-toggle">
             <i class="uil uil-apps"></i>
           </div>
@@ -1450,6 +1453,23 @@
             iframe.src = urls[language] || urls['en'];
         }
 
+		// Funzione per aggiornare i link al carrello in base alla lingua
+		function updateLanguageLink(language) {
+			const links = {
+				'en': 'https://checkout.rabbit.tech/checkouts/co/e0dd6faf6485f0e5e891fa87f7b7d5fb?auto_redirect=true&edge_redirect=true&key=&locale=en&skip_shop_pay=true',
+				'it-IT': 'https://checkout.rabbit.tech/checkouts/co/092b6df5d9a13fbfdb17710de4ebca6d?auto_redirect=true&edge_redirect=true&key=&locale=it&skip_shop_pay=true',
+				'fr-FR': 'https://checkout.rabbit.tech/checkouts/co/22f0dc82090d79d95c8de6bbd30e3409?auto_redirect=true&edge_redirect=true&key=&locale=fr&skip_shop_pay=true',
+				'de-DE': 'https://checkout.rabbit.tech/checkouts/co/c78b3eb96296c15d5e4144e4acc4f3a2?auto_redirect=true&edge_redirect=true&key=&locale=de&skip_shop_pay=true',
+				'es-ES': 'https://checkout.rabbit.tech/checkouts/co/e06737ffd1bd8dbf80e0027820d2200f?auto_redirect=true&edge_redirect=true&key=&locale=es&skip_shop_pay=true',
+				'ro-RO': 'https://checkout.rabbit.tech/checkouts/co/e140bfc775684cd02278dbf53a285a58?auto_redirect=true&edge_redirect=true&key=&locale=ro&skip_shop_pay=true'
+			};
+			
+			const languageLink = document.getElementById('languageLink');
+			if (languageLink) {
+				languageLink.href = links[language] || links['en'];
+			}
+		}
+
 		// Funzione per aggiornare le immagini in base alla lingua
 		function updateImages(language) {
 		document.querySelectorAll('[data-translatable]').forEach(img => {
@@ -1466,37 +1486,44 @@
             i18n.changeLanguage(detectedLanguage);
             updateIframe(detectedLanguage);
 			updateImages(detectedLanguage);
-
+			updateLanguageLink(detectedLanguage);
+			
             // Aggiungi eventi ai pulsanti per cambiare lingua
             document.getElementById('en-btn').onclick = function () {
                 i18n.changeLanguage('en');
                 updateIframe('en');
 				updateImages('en');
+				updateLanguageLink('en');
             };
             document.getElementById('it-btn').onclick = function () {
                 i18n.changeLanguage('it-IT');
                 updateIframe('it-IT');
 				updateImages('it-IT');
+				updateLanguageLink('it-IT');
             };
             document.getElementById('fr-btn').onclick = function () {
                 i18n.changeLanguage('fr-FR');
                 updateIframe('fr-FR');
 				updateImages('fr-FR');
+				updateLanguageLink('fr-FR');
             };
             document.getElementById('de-btn').onclick = function () {
                 i18n.changeLanguage('de-DE');
                 updateIframe('de-DE');
 				updateImages('de-DE');
+				updateLanguageLink('de-DE');
             };
             document.getElementById('es-btn').onclick = function () {
                 i18n.changeLanguage('es-ES');
                 updateIframe('es-ES');
 				updateImages('es-ES');
+				updateLanguageLink('es-ES');
             };
             document.getElementById('ro-btn').onclick = function () {
                 i18n.changeLanguage('ro-RO');
                 updateIframe('ro-RO');
 				updateImages('ro-RO');
+				updateLanguageLink('ro-RO');
             };
         };
     </script>
