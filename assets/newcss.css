@@ -1036,6 +1036,7 @@ img {
 
   .home__container {
     row-gap: 5rem;
+	margin-top: -50px;
   }
 
   .home__content {
