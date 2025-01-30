@@ -17,7 +17,7 @@
   <body oncontextmenu="return false">
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="/" class="nav__logo">
+        <a href="./index.html" class="nav__logo">
 		<!--h2 class="h1 margin-top-0 margin-bottom-0 margin-left-md margin-right-xs display-flex flex-nowrap">
 		<span style="color: var(--fa-dk-yellow);"><i class="fa-solid fa-planet-ringed fa-fw margin-right-2xs"></i></span></h2-->
           <span data-translatable>Rabbit World // Mondo Rabbit // Monde Rabbit // Rabbit Welt // Mundo Rabbit // Lumea Rabbit</span>
@@ -1269,8 +1269,9 @@
 
               <div>
                 <h3 class="contact__title">Email</h3>
-                <span class="contact__subtitle"
-                  >rabbit.clown.world+website@gmail.com</span
+				<!--===================== HTML encoding to prevent Spam Bots =====================-->
+                <span class="contact__subtitle" id="emailLink"
+                  ><a href="">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></span
                 >
               </div>
             </div>
@@ -1470,6 +1471,24 @@
 			}
 		}
 
+		// Funzione per aggiornare il link email in base alla lingua
+		function updateEmailLink(language) {
+			const emailLink = document.getElementById('emailLink');
+
+			// Definizione dei link email per ogni lingua
+			const emailLinks = {
+				'en': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Inquiry%20about%20rabbit%20r1&body=Hello%20Rabbit%2C%0A%0AI\'m%20interested%20in%20learning%20more%20about%20the%20rabbit%20r1.%0A%0ACould%20you%20please%20provide%20me%20with%20additional%20information%3F%0A%0AThank%20you%2C%0A[Your%20Name]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>',
+				'it-IT': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Richiesta%20informazioni%20su%20rabbit%20r1&body=Ciao%20Rabbit%2C%0A%0ASono%20interessato%20a%20saperne%20di%20pi%C3%B9%20sul%20rabbit%20r1.%0A%0APotresti%20fornirmi%20ulteriori%20informazioni%3F%0A%0AGrazie%2C%0A[Il%20tuo%20nome]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>',
+				'fr-FR': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Demande%20d\'informations%20sur%20rabbit%20r1&body=Bonjour%20Rabbit%2C%0A%0AJe%20suis%20int%C3%A9ress%C3%A9(e)%20%C3%A0%20en%20savoir%20plus%20sur%20le%20rabbit%20r1.%0A%0APourriez-vous%20me%20fournir%20des%20informations%20suppl%C3%A9mentaires%20%3F%0A%0AMerci%2C%0A[Votre%20nom]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>',
+				'de-DE': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Anfrage%20zu%20rabbit%20r1&body=Hallo%20Rabbit%2C%0A%0AIch%20interessiere%20mich%20f%C3%BCr%20den%20rabbit%20r1%20und%20w%C3%BCrde%20gerne%20mehr%20dar%C3%BCber%20erfahren.%0A%0AK%C3%B6nnten%20Sie%20mir%20bitte%20weitere%20Informationen%20zukommen%20lassen%3F%0A%0AVielen%20Dank%2C%0A[Ihr%20Name]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>',
+				'es-ES': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Consulta%20sobre%20rabbit%20r1&body=Hola%20Rabbit%2C%0A%0AEstoy%20interesado%20en%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20rabbit%20r1.%0A%0A%C2%BFPodr%C3%ADa%20proporcionarme%20informaci%C3%B3n%20adicional%3F%0A%0AGracias%2C%0A[Su%20nombre]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>',
+				'ro-RO': '<a href="mailto:&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=Solicitare%20informa%C8%9Bii%20despre%20rabbit%20r1&body=Bun%C4%83%20ziua%20Rabbit%2C%0A%0ASunt%20interesat%20s%C4%83%20aflu%20mai%20multe%20despre%20rabbit%20r1.%0A%0AA%C8%9Bi%20putea%20s%C4%83-mi%20oferi%C8%9Bi%20informa%C8%9Bii%20suplimentare%3F%0A%0AV%C4%83%20mul%C8%9Bumesc%2C%0A[Numele%20dumneavoastr%C4%83]">&#114;&#97;&#98;&#98;&#105;&#116;&#46;&#99;&#108;&#111;&#119;&#110;&#46;&#119;&#111;&#114;&#108;&#100;&#43;&#109;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>'
+			};
+
+		// Aggiorna l'HTML del link email
+		emailLink.innerHTML = emailLinks[language] || emailLinks['en'];
+		}
+		
 		// Funzione per aggiornare le immagini in base alla lingua
 		function updateImages(language) {
 		document.querySelectorAll('[data-translatable]').forEach(img => {
@@ -1486,6 +1505,7 @@
             i18n.changeLanguage(detectedLanguage);
             updateIframe(detectedLanguage);
 			updateImages(detectedLanguage);
+			updateEmailLink(detectedLanguage);
 			updateLanguageLink(detectedLanguage);
 			
             // Aggiungi eventi ai pulsanti per cambiare lingua
@@ -1493,36 +1513,42 @@
                 i18n.changeLanguage('en');
                 updateIframe('en');
 				updateImages('en');
+				updateEmailLink('en');
 				updateLanguageLink('en');
             };
             document.getElementById('it-btn').onclick = function () {
                 i18n.changeLanguage('it-IT');
                 updateIframe('it-IT');
 				updateImages('it-IT');
+				updateEmailLink('it-IT');
 				updateLanguageLink('it-IT');
             };
             document.getElementById('fr-btn').onclick = function () {
                 i18n.changeLanguage('fr-FR');
                 updateIframe('fr-FR');
 				updateImages('fr-FR');
+				updateEmailLink('fr-FR');
 				updateLanguageLink('fr-FR');
             };
             document.getElementById('de-btn').onclick = function () {
                 i18n.changeLanguage('de-DE');
                 updateIframe('de-DE');
 				updateImages('de-DE');
+				updateEmailLink('de-DE');
 				updateLanguageLink('de-DE');
             };
             document.getElementById('es-btn').onclick = function () {
                 i18n.changeLanguage('es-ES');
                 updateIframe('es-ES');
 				updateImages('es-ES');
+				updateEmailLink('es-ES');
 				updateLanguageLink('es-ES');
             };
             document.getElementById('ro-btn').onclick = function () {
                 i18n.changeLanguage('ro-RO');
                 updateIframe('ro-RO');
 				updateImages('ro-RO');
+				updateEmailLink('ro-RO');
 				updateLanguageLink('ro-RO');
             };
         };
