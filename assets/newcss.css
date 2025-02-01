@@ -291,6 +291,14 @@ img {
   z-index: 1000;
 }
 
+@media screen and (max-width: 768px) {
+  .language-dropdown {
+    top: auto; /* Rimuove il posizionamento dall'alto */
+    bottom: 100%; /* Posiziona il menu sopra l'elemento genitore */
+    max-height: 50vh; /* Limita l'altezza al 50% dell'altezza della viewport */
+  }
+}
+
 .language-option {
   display: flex;
   align-items: center;
