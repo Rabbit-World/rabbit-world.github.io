@@ -1662,12 +1662,27 @@
 				changeLanguage(finalLang);
 			} else {
 				changeLanguage(i18n.options.defaultLanguage);
-				
-			// Aggiornamento aggiuntivo dopo il rendering completo
-			setTimeout(() => updateIframe(finalLang), 100);			
-
 			}			
 		};
+		
+			// Modifica la funzione di inizializzazione
+			window.onload = function () {
+				const detectedLang = detectBrowserLanguage();
+				
+				// Mappatura completa per tutte le 25 lingue
+				const fullLangMap = {
+					'pt': 'pt-PT',
+					'zh': 'zh-CN',
+				};
+				
+				const finalLang = fullLangMap[detectedLang] || detectedLang;
+				
+				// Forza l'aggiornamento iniziale
+				changeLanguage(finalLang);
+				
+				// Aggiornamento aggiuntivo dopo il rendering completo
+				setTimeout(() => updateIframe(finalLang), 100);			
+			};
 		
 		// Modifica la funzione updateIframe
 		function updateIframe(language) {
@@ -1690,7 +1705,28 @@
 			
 			iframe.src = finalUrl + '&cache=' + Date.now(); // Bypassa la cache
 			iframe.onload = () => console.log('Iframe loaded for:', language);
-		}
+			
+			// Aggiornamento aggiuntivo dopo il rendering completo
+			setTimeout(() => updateIframe(finalLang), 100);			
+}
+		// Modifica la funzione di inizializzazione
+		window.onload = function () {
+			const detectedLang = detectBrowserLanguage();
+			
+			// Mappatura completa per tutte le 25 lingue
+			const fullLangMap = {
+				'pt': 'pt-PT',
+				'zh': 'zh-CN',
+			};
+			
+			const finalLang = fullLangMap[detectedLang] || detectedLang;
+			
+			// Forza l'aggiornamento iniziale
+			changeLanguage(finalLang);
+			
+			// Aggiornamento aggiuntivo dopo il rendering completo
+			setTimeout(() => updateIframe(finalLang), 100);			
+		};
 		
 		// Funzione per aggiornare i link al carrello in base alla lingua
 		function updateLanguageLink(language) {
